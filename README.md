@@ -7,7 +7,9 @@ This is the unique number generator using redis and so for installing redis plea
 !tar -xvf redis-stack-server.tar.gz
 
 !pip install redis
+
 !pip install gunicorn
+
 !pip install flask
 
 !./redis-stack-server-6.2.6-v7/bin/redis-stack-server --daemonize yes

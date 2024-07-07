@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: unique-number-generator-deployment
+  name: unique-number-generator-microservice-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: unique-number-generator
+      app: unique-number-generator-microservice
   template:
     metadata:
       labels:
-        app: unique-number-generator
+        app: unique-number-generator-microservice
     spec:
       containers:
-      - name: unique-number-generator
-        image: unique-number-generator:latest
+      - name: unique-number-generator-microservice
+        image: unique-number-generator-microservice:latest
         ports:
         - containerPort: 5000

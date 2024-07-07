@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: unique-number-generator-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: unique-number-generator
+  template:
+    metadata:
+      labels:
+        app: unique-number-generator
+    spec:
+      containers:
+      - name: unique-number-generator
+        image: unique-number-generator:latest
+        ports:
+        - containerPort: 5000

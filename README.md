@@ -17,4 +17,23 @@ This is the unique number generator using redis and so for installing redis plea
 
 Run the below command
 
-python unique_number_generator.py
+python microservice.py
+
+## Docker build
+docker build -t sample-microservice .
+
+## Docker run
+docker run -p 5000:5000 sample-microservice
+
+## Apply Kubernettes configuration
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+## Access microservice
+
+kubectl get service sample-microservice-service
+
+
+
+
+

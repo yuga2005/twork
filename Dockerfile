@@ -1,6 +1,9 @@
 # Use the official Python image from the Docker Hub
 FROM python:3.9-slim
 
+# Create the app folder
+RUN MKDIR /app
+
 # Set the working directory in the container
 WORKDIR /app
 
@@ -17,4 +20,4 @@ COPY . .
 EXPOSE 5000
 
 # Run the Flask app
-CMD ["python", "app.py"]
+CMD ["python", "microservice.py"]
